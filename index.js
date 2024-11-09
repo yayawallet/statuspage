@@ -7,7 +7,10 @@ async function genReportLog(container, key, label) {
         statusLines = await response.text();
     }
 
+
     const normalized = normalizeData(statusLines);
+    console.log(normalized);
+
     const statusStream = constructStatusStream(key, label, normalized);
     container.appendChild(statusStream);
 }
