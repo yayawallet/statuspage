@@ -35,7 +35,8 @@ function constructStatusStream(key, label, uptimeData) {
 }
 
 function constructStatusLine(key, relDay, upTimeArray) {
-    let date = new Date();
+    let date = new Date(new Date().toLocaleString('en', {timeZone: 'Africa/Addis_Ababa'}));
+
     date.setDate(date.getDate() - relDay);
 
     return constructStatusSquare(key, date, upTimeArray);
@@ -186,7 +187,7 @@ function splitRowsByDate(rows) {
         const [dateTimeStr, resultStr] = row.split(",", 2);
         // Replace '-' with '/' because Safari
         const dateTime = new Date(
-            Date.parse(dateTimeStr.replaceAll("-", "/") + " GMT")
+            Date.parse(dateTimeStr.replaceAll("-", "/") + " Africa/Addis_Ababa")
         );
         const dateStr = dateTime.toDateString();
 
