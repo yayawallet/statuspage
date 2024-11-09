@@ -187,7 +187,7 @@ function splitRowsByDate(rows) {
         const [dateTimeStr, resultStr] = row.split(",", 2);
         // Replace '-' with '/' because Safari
         const dateTime = new Date(
-            Date.parse(dateTimeStr.replaceAll("-", "/") + " Africa/Addis_Ababa")
+            Date.parse(dateTimeStr.replaceAll("-", "/") + " GMT")
         );
         const dateStr = dateTime.toDateString();
 
