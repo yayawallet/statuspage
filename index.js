@@ -148,7 +148,7 @@ function normalizeData(statusLines) {
     const dateNormalized = splitRowsByDate(rows);
 
     let relativeDateMap = {};
-    const now = Date.now();
+    const now = new Date(new Date().toLocaleString('en', {timeZone: 'Africa/Addis_Ababa'}));
     for (const [key, val] of Object.entries(dateNormalized)) {
         if (key == "upTime") {
             continue;
