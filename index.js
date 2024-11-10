@@ -122,13 +122,13 @@ function getStatusText(color) {
 
 function getStatusDescriptiveText(color) {
     return color == "nodata"
-        ? "No Data Available: Health check was not performed."
+        ? "No Data Available: Health check was not performed"
         : color == "success"
-            ? "No downtime recorded."
+            ? "No downtime recorded"
             : color == "failure"
-                ? "Major outages recorded."
+                ? "Major outages recorded"
                 : color == "partial"
-                    ? "Partial outages recorded."
+                    ? "Partial outages recorded"
                     : "Unknown";
 }
 
