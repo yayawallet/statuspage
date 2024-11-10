@@ -89,7 +89,7 @@ function applyTemplateSubstitutions(node, parameters) {
         node.setAttribute(attr, templatizeString(attrVal, parameters));
     }
 
-    if (node.childElementCount == 0) {
+    if (node.childElementCount === 0) {
         node.innerText = templatizeString(node.innerText, parameters);
     } else {
         const children = Array.from(node.children);
@@ -109,25 +109,25 @@ function templatizeString(text, parameters) {
 }
 
 function getStatusText(color) {
-    return color == "nodata"
+    return color === "nodata"
         ? "No Data Available"
-        : color == "success"
+        : color === "success"
             ? "Fully Operational"
-            : color == "failure"
+            : color === "failure"
                 ? "Major Outage"
-                : color == "partial"
+                : color === "partial"
                     ? "Partial Outage"
                     : "Unknown";
 }
 
 function getStatusDescriptiveText(color) {
-    return color == "nodata"
+    return color === "nodata"
         ? "No Data Available: Health check was not performed"
-        : color == "success"
+        : color === "success"
             ? "No downtime recorded"
-            : color == "failure"
+            : color === "failure"
                 ? "Major outages recorded"
-                : color == "partial"
+                : color === "partial"
                     ? "Partial outages recorded"
                     : "Unknown";
 }
@@ -150,7 +150,7 @@ function normalizeData(statusLines) {
     let relativeDateMap = {};
     const now = new Date(new Date().toLocaleString('en', {timeZone: 'Africa/Addis_Ababa'}));
     for (const [key, val] of Object.entries(dateNormalized)) {
-        if (key == "upTime") {
+        if (key === "upTime") {
             continue;
         }
 
@@ -163,7 +163,7 @@ function normalizeData(statusLines) {
 }
 
 function getDayAverage(val) {
-    if (!val || val.length == 0) {
+    if (!val || val.length === 0) {
         return null;
     } else {
         return val.reduce((a, v) => a + v) / val.length;
@@ -201,7 +201,7 @@ function splitRowsByDate(rows) {
         }
 
         let result = 0;
-        if (resultStr.trim() == "success") {
+        if (resultStr.trim() === "success") {
             result = 1;
         }
         sum += result;
