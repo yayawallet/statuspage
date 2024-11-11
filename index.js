@@ -9,7 +9,15 @@ async function genReportLog(container, key, label) {
 
     const normalized = normalizeData(statusLines);
     const statusStream = constructStatusStream(key, label, normalized);
-    container.appendChild(statusStream);
+
+    statusStream.id = key;
+
+    const existing = document.getElementById(key);
+    if (existing) {
+        existing.innerHTML = statusStream.innerHTML;
+    } else {
+        container.appendChild(statusStream);
+    }
 }
 
 function constructStatusStream(key, label, uptimeData) {
@@ -246,7 +254,7 @@ async function genAllReports() {
     const response = await fetch("services.cfg");
 
     const reportContainer = document.getElementById("reports");
-    reportContainer.innerHTML = "";
+
     const configText = await response.text();
     const configLines = configText.split("\n");
     for (let ii = 0; ii < configLines.length; ii++) {
