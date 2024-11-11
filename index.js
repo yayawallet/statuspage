@@ -244,6 +244,9 @@ function hideTooltip() {
 
 async function genAllReports() {
     const response = await fetch("services.cfg");
+
+    const reportContainer = document.getElementById("reports");
+    reportContainer.innerHTML = "";
     const configText = await response.text();
     const configLines = configText.split("\n");
     for (let ii = 0; ii < configLines.length; ii++) {
@@ -254,7 +257,7 @@ async function genAllReports() {
         }
 
         await genReportLog(
-            document.getElementById("reports"),
+            reportContainer,
             key,
             label.trim()
         );
