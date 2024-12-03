@@ -3,7 +3,7 @@
 
 FIXED
 
-03/12/2024 06:45 AM Due to Ethswitch migration, other bank transfer for a few banks will not work.<br />
+03/12/2024 06:20 AM Due to Ethswitch migration, other bank transfer for a few banks will not work.<br />
 The service interruptions are expected from **November 29, 2024, at 5:00 AM** until **December 2, 2024, at 5:00 AM**.
 
 06/11/2024 04:10 PM EAT We are unable to reach the national switch to make bank transfers. This will cause all bank transfers to fail. We have identified the root-cause to be a failure on the network connectivity at EthSwitch side and have engaged with their support team to resolve this as soon as possible.
