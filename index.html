@@ -69,13 +69,13 @@
   </body>
   <script>
     genAllReports();
-    // window.addEventListener('load', () => {
-    //   genIncidentReport();
-    // });
-    //
-    // setInterval(() => {
-    //   genAllReports();
-    //   genIncidentReport();
-    // }, 50000);
+    window.addEventListener('load', () => {
+      genIncidentReport();
+    });
+
+    setInterval(() => {
+      genAllReports();
+      genIncidentReport();
+    }, 50000);
   </script>
 </html>
