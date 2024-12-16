@@ -38,8 +38,6 @@ function constructStatusStream(key, label, uptimeData) {
         upTime: uptimeData.upTime,
     });
 
-    console.log(container.childNodes);
-
     container.childNodes[1].appendChild(streamContainer);
     return container;
 }
