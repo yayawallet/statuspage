@@ -1,3 +1,10 @@
+#### 18/11/2025 6:30 PM EAT
+
+RESTORED
+
+We are currently experiencing service interruptions due to a **major CloudFlare outage** affecting numerous global platforms. This incident is impacting not only our systems but also leading services such as ChatGPT and Twitter among others.
+
+
 #### 29/11/2024 5:00 AM EAT
 
 FIXED
